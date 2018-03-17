@@ -1,21 +1,49 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+    <head>
+        <!-- 
+            Good Tuts:  https://hackernoon.com/here-are-5-layouts-that-you-can-make-with-flexbox-6ca1e941f33d
+                        https://medium.freecodecamp.org/understanding-flexbox-everything-you-need-to-know-b4013d4dc9af
+                        https://medium.freecodecamp.org/the-ultimate-guide-to-flexbox-learning-through-examples-8c90248d4676
+                        http://markheath.net/post/simple-css-blog-layout-flexbox
 
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
-
-  <link rel="stylesheet" href="styles.css">
-
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
-
-<body>
-  <script src="js/scripts.js"></script>
-</body>
+            Dont worry about the 'normalize.css'. it is more or less just standardization junk
+        -->
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="author" content="Kyle Daniel">
+        <meta name="description" content="Demonstration of layouts using FlexBox">
+        <title>Mondo Cool Studios</title>
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="flexContainer flexColumn fullHeight whiteBackground">
+            <nav class="flexContainer blackBackground">
+                <ul class="nav flexItem flexStart">
+                    <li><a href="#">Mondo Cool Studios</a></li>
+                </ul>
+                <ul class="nav flexContainer flexEnd">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="flexContainer flexItem">
+                <main class="flexItem whiteBackground main">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </main>
+                <aside class="sidebar sidebarRight">
+                    <h2>Right Sidebar</h2>
+                    <p>Put your content here</p>
+                </aside>
+            </div>
+            <footer class="flexContainer flexCenter blackBackground whiteText height50">&copy; Mondo Cool Studios</footer>
+        </div>
+    </body>
 </html>
